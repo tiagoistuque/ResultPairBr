@@ -98,10 +98,10 @@ var
   LTypeInfo: PTypeInfo;
   LObject: TValue;
 begin
-  LTypeInfo := TypeInfo(F);
+  LTypeInfo := TypeInfo(S);
   if LTypeInfo.Kind = tkClass then
   begin
-    LObject := TValue.From<F>(FFailure.GetValue);
+    LObject := TValue.From<S>(FSuccess.GetValue);
     LObject.AsObject.Free;
   end;
 end;
